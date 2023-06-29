@@ -8,7 +8,7 @@ import dayjs from 'dayjs'
 import baiduCode from './config/baiduCode' // 百度统计hm码
 import htmlModules from './config/htmlModules' // 自定义插入的html块
 
-const DOMAIN_NAME = 'xugaoyi.com' // 域名 (不带https)
+const DOMAIN_NAME = 'timevips.com' // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
@@ -16,6 +16,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   port: '8099', //端口号
   // theme: 'vdoing', // 使用npm主题包
   theme: resolve(__dirname, '../../vdoing'), // 使用本地主题包
+  dest: "./dist", //指定 vuepress build 的输出目录。如果传入的是相对路径，则会基于 process.cwd() 进行解析。默认值: .vuepress/dist
 
   locales: {
     '/': {
